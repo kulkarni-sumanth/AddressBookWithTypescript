@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Address Book</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+    <body>
+        <div class="heading">
+            <p>Address Book</p>
+        </div>
+        <ul class="navbar">
+            <li class="home active"><a href="#">HOME</a></li>
+            <li class="add-employee"><a href="#">+ADD</a></li>
+            <li class="icon"><img src="./assets/icons/blog-icon.png" alt="icon"></li>
+        </ul>
+        <h4 class="content-heading">CONTACTS</h4>
+        <div class="content">
+            <div class="contact-details">
+                <ul class="contact-list">
+                </ul>
+            </div>
+            <div class="employee-details" id="employee-details">
+                <div class="profile-name">
+                    <h1 class="dynamic-data"></h1>
+                    <div class="change-details">
+                        <span class="edit" id="edit"><img src="assets/icons/Edit-icon.png" alt="icon">EDIT</span>
+                        <span class="delete" id="delete"><img src="assets/icons/delete2.png" alt="icon">DELETE</span>
+                    </div>
+                </div>
+                <div>Email: <span class="dynamic-data"></span></div>
+                <div>
+                    <p>Mobile: <span class="dynamic-data"></span></p>
+                    <p>Landline: <span class="dynamic-data"></span></p>
+                </div>
+                <div>Website: <span class="dynamic-data"></span></div>
+                <div class="home-address">
+                    <p>Address: </p>
+                    <div class="dynamic-data" id="textarea"></div>
+                </div>
+            </div>
+            <div class="popup">
+                <form class="contact-form">
+                    <p class="fill-all form-error">Please fill valid details</p>
+                    <div>
+                        <label for="name">Name</label>
+                        <input class="requiredField" name="name" type="text" id="name">
+                        <span class="form-error"> *</span>
+                        <p class="form-error" id="name-error">*</p>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input class="requiredField" name="email" type="email" id="email">
+                        <span class="form-error"> *</span>
+                        <p class="form-error" id="email-error">*</p>
+                    </div>
+                    <div class="contact-numbers">
+                        <div>
+                            <label for="mobile">Mobile</label>
+                            <input class="requiredField" name="mobileNumber" type="tel" id="mobile">
+                            <span class="form-error"> *</span>
+                            <p class="form-error" id="mobileNumber-error">*</p>
+                        </div>
+                        <div>
+                            <label for="landline">Landline</label>
+                            <input name="landlineNumber" type="tel" id="landline">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="website">Website</label>
+                        <input class="requiredField" name="website" type="url" id="website">
+                        <span class="form-error"> *</span>
+                        <p class="form-error" id="website-error"></p>
+                    </div>
+                    <div>
+                        <label for="address">Address</label>
+                        <textarea name="address" class="address" id="address"></textarea>
+                    </div>
+                    <div>
+                        <input class="submit-button" type="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
